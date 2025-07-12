@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;600&display=swap');
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --color1: #6E8FB2;
+  --color2: #7DA494;
+  --color3: #EAB67A;
+  --color4: #E5A79A;
+  --color5: #C16E71;
+  --color9: #D0D08A;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+}
+
+/* Reset & Smooth Scroll */
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color2);
+  color: #333;
+}
+
+header, footer {
+  background: rgba(110,143,178,0.8);
+  text-align: center;
+  padding: var(--space-md);
+}
+
+nav ul {
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  gap: var(--space-lg);
+}
+
+nav a {
+  text-decoration:none;
+  color:#fff;
+  font-family: var(--font-heading);
+  font-weight:600;
+}
+
+nav a:hover { color: var(--color3); }
+
+footer p {
+  color:#fff;
+  font-size:0.9rem;
+}
+
+.hero {
+  position:relative;
+  height:50vh;
+  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--color9);
+  border-radius:12px;
+  margin: var(--space-lg) 0;
+}
+
+.hero-overlay {
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position:relative;
+  color:#fff;
+  text-align:center;
+  padding: var(--space-lg);
+}
+
+.container { max-width:1000px; margin:0 auto; padding: var(--space-md); }
+
+main {
+  background:#fff;
+  border:1px solid var(--color9);
+  border-radius:8px;
+  padding: var(--space-lg);
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: var(--space-xl);
+}
+
+.two-column {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap: var(--space-lg);
+}
+
+/* Handicraft rows and partitions */
+.gallery { display:flex; flex-direction:column; gap: var(--space-lg); }
+.showcase-row {
+  display:flex;
+  gap: var(--space-md);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px dashed var(--color5);
+}
+.showcase-row figure { flex:1; }
+
+figure img {
+  width:100%; height:auto;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:8px;
+}
+figure { text-align:center; }
+
+/* Wooden Fish page */
+.container.merit { display:flex; flex-direction:column; align-items:center; text-align:center; gap: var(--space-md); }
+.fish-container { position:relative; }
+.merit img {
+  cursor:pointer;
+  max-width:200px;
+  transition: transform 0.2s ease;
+}
+.merit img.bounce {
+  animation: bounce 0.3s ease;
+}
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+.toast {
+  position:absolute;
+  top:-20px;
+  left:50%;
+  transform:translateX(-50%);
+  background: var(--color3);
+  color: #fff;
+  padding: var(--space-sm) var(--space-md);
+  border-radius:4px;
+  opacity:0;
+  transition: opacity 0.3s ease;
+}
+.toast.show { opacity:1; }
+
+
+
+
+@media (max-width:768px) {
+  nav ul { flex-direction:column; gap: var(--space-md); }
+  .showcase-row { flex-direction:column; }
+}
