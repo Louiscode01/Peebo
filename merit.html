@@ -1,63 +1,46 @@
+<!-- merit.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wooden Fish Merit Counter</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Header & Navigation -->
   <header>
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="gallery.html">Handicraft Gallery</a></li>
-        <li><a href="merit.html">Wooden Fish</a></li>
+        <li><a href="merit.html" aria-current="page">Wooden Fish</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main class="container merit">
-    <!-- Title & Current Count -->
-    <h1>Wooden Fish</h1>
-    <p>Merits: <span id="merit-count">0</span></p>
-
-    <!-- Wooden Fish Image & Toast Notifications -->
-    <div class="fish-container">
-      <img
-        id="wooden-fish"
-        src="images/wooden-fish.svg"
-        alt="Wooden fish"
-        role="button"
-        tabindex="0"
-        aria-label="Accumulate merit by tapping the wooden fish"
-      />
-      <div id="toast" class="toast" role="status" aria-live="polite"></div>
-    </div>
-
-    <!-- Fortune Slip & Answer Suggestion Controls -->
-    <div class="controls">
-      <button id="fortune-btn">🎴 Fortune Slip (30 merits)</button>
-      <button id="answer-btn">❓ Get Answer (15 merits)</button>
-    </div>
-
-    <!-- Display Areas for Random Slip & Suggestion -->
-    <div id="fortune-display" class="message" role="status" aria-live="polite"></div>
-    <div id="answer-display" class="message" role="status" aria-live="polite"></div>
+    <h1>Wooden Fish Merit Counter</h1>
 
     <!-- Background Chant Audio -->
     <audio id="bg-music" src="audio/chant.mp3" loop autoplay></audio>
+
+    <div class="fish-container">
+      <img id="wooden-fish" src="images/wooden-fish.svg" alt="Wooden Fish" tabindex="0" />
+      <div id="toast" class="toast"></div>
+    </div>
+    <p>Merits: <span id="merit-count">0</span></p>
+    <button id="fortune-btn">Get Fortune Slip (30 Merits)</button>
+    <div id="fortune-display"></div>
+    <button id="answer-btn">Get Suggestion (15 Merits)</button>
+    <div id="answer-display"></div>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Peebo. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
