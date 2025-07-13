@@ -1,4 +1,6 @@
-// Populate gallery in rows of 2 with partition
+// js/gallery.js
+
+// Dynamically populates the gallery with wood‑framed craft items
 document.addEventListener('DOMContentLoaded', () => {
   const galleryEl = document.getElementById('gallery');
   if (!galleryEl) return;
@@ -10,17 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
     { src: 'images/craft4.jpg', title: 'Craft 4' }
   ];
 
-  for (let i = 0; i < crafts.length; i += 2) {
-    const row = document.createElement('div');
-    row.className = 'showcase-row';
-    crafts.slice(i, i + 2).forEach(c => {
-      const fig = document.createElement('figure');
-      fig.innerHTML = `
-        <img src="${c.src}" alt="${c.title}" loading="lazy" />
-        <figcaption>${c.title}</figcaption>
-      `;
-      row.appendChild(fig);
-    });
-    galleryEl.appendChild(row);
-  }
+  crafts.forEach(c => {
+    // Create a frame for each craft
+    const frame = document.createElement('figure');
+    frame.className = 'showcase-frame';
+    frame.innerHTML = `
+      <img src="${c.src}" alt="${c.title}" loading="lazy" />
+      <figcaption>${c.title}</figcaption>
+    `;
+
+    galleryEl.appendChild(frame);
+  });
 });
