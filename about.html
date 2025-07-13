@@ -7,41 +7,157 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Header & Navigation -->
   <header>
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
+        <li><a href="about.html" aria-current="page">About Me</a></li>
         <li><a href="gallery.html">Handicraft Gallery</a></li>
         <li><a href="merit.html">Wooden Fish</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="container two-column">
-    <section class="profile">
-      <img src="https://via.placeholder.com/150" alt="Placeholder profile" />
-      <h2>Peebo</h2>
-      <p>Currently a student in Pitt’s Speech-Language Pathology program.</p>
-      <a href="peebo-cv.pdf" download>Download CV</a>
+  <!-- Main Content -->
+  <main class="container about">
+    <!-- Profile (centered at top) -->
+    <section class="profile" style="text-align:center; margin:2em auto;">
+      <img
+        src="images/peebo.jpg"
+        alt="Peebo’s Profile Photo"
+        width="150"
+        height="150"
+        style="border-radius:50%;"
+      />
+      <h1>Peebo</h1>
+      <p>Student, University of Pittsburgh’s Speech-Language Pathology Program</p>
+      <p><a href="peebo-cv.pdf" download>Download CV</a></p>
     </section>
 
-    <section class="details">
-      <h3>Hobbies</h3>
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
       <ul>
-        <li>Placeholder Hobby 1</li>
-        <li>Placeholder Hobby 2</li>
-        <li>Placeholder Hobby 3</li>
+        <li>Master of Science in Speech-Language Pathology, University of Pittsburgh, In Progress</li>
+        <li>Post-Baccalaureate Certificate in Biology, University of Pittsburgh, 2025</li>
+        <li>Bachelor of Science in Biology, University of Pittsburgh, 2024</li>
       </ul>
+    </section>
 
-      <h3>Fun Fact</h3>
-      <p>This is a placeholder fun fact about Peebo!</p>
+    <!-- Professional Experience -->
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <ul>
+        <li>Speech-Language Pathology Intern, ABC Therapy Clinic — Jun 2023 to Present</li>
+        <li>Research Assistant, University of Pittsburgh Language Lab — Sep 2022 to May 2023</li>
+      </ul>
+    </section>
 
-      <h3>Contact</h3>
-      <p><a href="mailto:placeholder@example.com">placeholder@example.com</a></p>
+    <!-- Language Proficiency -->
+    <section id="language-proficiency" style="max-width:400px; margin:2em auto; font-family:sans-serif;">
+      <h2 style="text-align:center;">Language Proficiency</h2>
+
+      <div style="margin:1.5em 0;">
+        <div style="display:flex; justify-content:space-between;">
+          <span><strong>English</strong></span>
+          <span>Native</span>
+        </div>
+        <div class="lang-bar bg">
+          <div class="lang-bar fill native"></div>
+        </div>
+      </div>
+
+      <div style="margin:1.5em 0;">
+        <div style="display:flex; justify-content:space-between;">
+          <span><strong>Mandarin Chinese</strong></span>
+          <span>Native</span>
+        </div>
+        <div class="lang-bar bg">
+          <div class="lang-bar fill native"></div>
+        </div>
+      </div>
+
+      <div style="margin:1.5em 0;">
+        <div style="display:flex; justify-content:space-between;">
+          <span><strong>Japanese</strong></span>
+          <span>Intermediate</span>
+        </div>
+        <div class="lang-bar bg">
+          <div class="lang-bar fill intermediate"></div>
+        </div>
+      </div>
+
+      <div style="margin:1.5em 0;">
+        <div style="display:flex; justify-content:space-between;">
+          <span><strong>Korean</strong></span>
+          <span>Basic</span>
+        </div>
+        <div class="lang-bar bg">
+          <div class="lang-bar fill basic"></div>
+        </div>
+      </div>
+
+      <div style="margin:1.5em 0;">
+        <div style="display:flex; justify-content:space-between;">
+          <span><strong>ASL</strong></span>
+          <span>Basic</span>
+        </div>
+        <div class="lang-bar bg">
+          <div class="lang-bar fill basic"></div>
+        </div>
+      </div>
+
+      <p style="font-size:0.95em; text-align:center; color:#666;">
+        <em>Scale: Native, Fluent, Professional Working, Intermediate, Basic</em>
+      </p>
+
+      <style>
+        .lang-bar.bg {
+          background: #f0f0f0;
+          border-radius: 12px;
+          height: 16px;
+          margin-top: 6px;
+          margin-bottom: 3px;
+          width: 100%;
+          overflow: hidden;
+        }
+        .lang-bar.fill {
+          height: 100%;
+          border-radius: 12px;
+          transition: width 0.6s;
+        }
+        .lang-bar.native { width: 100%; background: #319795; }
+        .lang-bar.professional { width: 80%; background: #38b2ac; }
+        .lang-bar.intermediate { width: 50%; background: #63b3ed; }
+        .lang-bar.basic { width: 25%; background: #b2f5ea; }
+      </style>
+    </section>
+
+    <!-- Hobbies -->
+    <section id="hobbies">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Handicraft &amp; DIY projects</li>
+        <li>Photography</li>
+        <li>Reading historical fiction</li>
+      </ul>
+    </section>
+
+    <!-- Fun Fact -->
+    <section id="fun-fact">
+      <h2>Fun Fact</h2>
+      <p>I once built a fully functional mechanical wooden fish that “pecks” when you tap it!</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:peebo@example.com">peebo@example.com</a></p>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Peebo. All rights reserved.</p>
   </footer>

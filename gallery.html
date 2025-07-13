@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Handicraft Gallery</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Frame and layout for gallery items */
+    #gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 2em auto;
+      max-width: 1000px;
+      gap: 2em;
+    }
+    .showcase-frame {
+      border: 8px solid #a0522d;       /* wood-brown border */
+      border-radius: 12px;
+      padding: 16px;
+      background: #fffbf3;             /* ivory background */
+      box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+      width: calc(50% - 2em);
+      box-sizing: border-box;
+    }
+    .showcase-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .showcase-frame figcaption {
+      text-align: center;
+      margin-top: 0.5em;
+      font-weight: bold;
+      color: #5a4033;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,20 +44,21 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
-        <li><a href="gallery.html">Handicraft Gallery</a></li>
+        <li><a href="gallery.html" aria-current="page">Handicraft Gallery</a></li>
         <li><a href="merit.html">Wooden Fish</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="container">
-    <h1>Handicraft Display Cabinet</h1>
-    <div id="gallery" class="gallery" aria-live="polite"></div>
-    <script src="js/gallery.js"></script>
+  <main class="container gallery">
+    <h1>Handicraft Gallery</h1>
+    <div id="gallery"></div>
   </main>
 
   <footer>
     <p>&copy; 2025 Peebo. All rights reserved.</p>
   </footer>
+
+  <script src="js/gallery.js"></script>
 </body>
 </html>
